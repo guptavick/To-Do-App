@@ -18,6 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     path('admin/',admin.site.urls),
-    path('Mytodo/',include('Myapp.urls')),
+    path('Mytodos/',include('Myapp.urls')),
 
 ]

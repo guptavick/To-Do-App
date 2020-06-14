@@ -27,10 +27,15 @@
     <div class= "row mt-4">
         <div class = "col">
             <ul class="list-group">
-                {% for todo in todo_items %}
-                    <li class="list-group-item">{{todo.text}}
-                    </li>
-                {% endfor %}
+                {% if todo_items %}
+                    {% for todo in todo_items %}
+                        <li class="list-group-item">{{todo.text}}</li>
+                    {% endfor %}
+                {% else %}
+                <div class="alert alert-success" role="alert">
+                    There are no pending todos for this date! To Add more please click on Home button
+                </div>
+                {% endif %}
             </ul>
         </div>
     </div>

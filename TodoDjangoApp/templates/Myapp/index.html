@@ -13,6 +13,7 @@
 <div class= "row mt-4">
     <div class = "col">
         <ul class="list-group">
+        {% if todo_items %}
             {% for todo in todo_items %}
                 <li class="list-group-item">{{todo.text}}
                     <div class = "float-right">
@@ -23,6 +24,7 @@
                     </div>
                 </li>
             {% endfor %}
+        {% endif %}
         </ul>
     </div>
 </div>
